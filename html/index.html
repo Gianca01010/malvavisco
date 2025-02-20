@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Álbumes del Artista</title>
+    <link rel="stylesheet" href="../css/index.css"> <!-- Cambiado a index.css -->
+    <!-- Iconos para el carrito y el login -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado fijo -->
+    <header>
+        <nav>
+            <div class="logo" style="display: flex; align-items: center;">
+                <!-- Agregar el logo interactivo -->
+                <a href="../html/index.html">
+                    <img src="../images/logoM.png" alt="Logo de Marshmello" style="height: 50px;"> <!-- Ajusta el tamaño según sea necesario -->
+                </a>
+                <span class="marshmello-dj">Marshmello DJ</span>
+            </div>            
+            <ul class="nav-links">
+                <li><a href="#albumes">Álbumes</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="login.php" class="icon-link"><i class="fas fa-user"></i> Login</a>
+                <a href="#carrito" class="icon-link"><i class="fas fa-shopping-cart"></i> Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carrusel">
+        <div class="carrusel-inner">
+            <div class="carrusel-item">
+                <img src="../images/m1.jpg" alt="Imagen 1">
+            </div>
+            <div class="carrusel-item">
+                <img src="../images/m2.jpg" alt="Imagen 2">
+            </div>
+            <div class="carrusel-item">
+                <img src="../images/m3.jpg" alt="Imagen 3">
+            </div>
+            <div class="carrusel-item">
+                <img src="../images/m4.jpg" alt="Imagen 4">
+            </div>
+            <div class="carrusel-item">
+                <img src="../images/m5.jpg" alt="Imagen 5">
+            </div>
+        </div>
+        <!-- Flechas personalizadas con los ojos de Marshmello -->
+        <button class="carrusel-btn prev">
+            <img src="../images/eye.png" alt="Ojo izquierdo">
+        </button>
+        <button class="carrusel-btn next">
+            <img src="../images/eye.png" alt="Ojo derecho">
+        </button>
+        <div class="carrusel-indicators"></div>
+    </div>
+
+    <!-- Separador entre el carrusel y los álbumes -->
+    <div class="separador">
+        <h2>Álbumes Destacados</h2>
+        <p>Explora la discografía de Marshmello.</p>
+    </div>
+
+    <!-- Álbumes del artista -->
+    <main id="albumes">
+        <div class="album-grid">
+            <div class="album">
+                <img src="../images/MELLODEATH.jpg" alt="MELLODEATH Tapes Vol. I">
+                <h2>MELLODEATH Tapes Vol. I</h2>
+                <p>Una colección de beats oscuros y atmosféricos que te transportan a otro mundo.</p>
+            </div>
+            <div class="album">
+                <img src="../images/SUGARPAPI.jpg" alt="Sugar Papi">
+                <h2>Sugar Papi</h2>
+                <p>Un viaje dulce y energético lleno de ritmos pegajosos y melodías alegres.</p>
+            </div>
+            <div class="album">
+                <img src="../images/SHOCKWAVE.jpg" alt="Shockwave">
+                <h2>Shockwave</h2>
+                <p>Un álbum electrizante que combina sonidos futuristas con drops potentes.</p>
+            </div>
+            <div class="album">
+                <img src="../images/joytimeiii.jpg" alt="Joytime III">
+                <h2>Joytime III</h2>
+                <p>La tercera entrega de la serie Joytime, llena de felicidad y ritmos vibrantes.</p>
+            </div>
+            <div class="album">
+                <img src="../images/joytimeii.jpg" alt="Joytime II">
+                <h2>Joytime II</h2>
+                <p>La secuela del éxito original, con más melodías alegres y beats contagiosos.</p>
+            </div>
+            <div class="album">
+                <img src="../images/joytimei.jpg" alt="Joytime I">
+                <h2>Joytime I</h2>
+                <p>El álbum que lo empezó todo, lleno de energía positiva y sonidos únicos.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/index.js"></script> <!-- Cambiado a index.js -->
+</body>
+</html>

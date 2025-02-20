@@ -1,0 +1,269 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #FFFFFF;
+}
+
+/* Estilos generales del encabezado fijo */
+header {
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    z-index: 1000;
+    padding: 15px 0; /* Ajuste del padding */
+    margin: 0; /* Asegúrate de que no tenga margen */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+.nav-links li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e9bc00; /* Color al hacer hover */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+.icon-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre ícono y texto */
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #e9bc00; /* Color al hacer hover */
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+    max-width: 400px;
+    margin: 150px auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(23, 23, 23, 0.2); /* Sombra más intensa */
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
+}
+
+.login-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos de los botones de social login */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #ddd; /* Borde gris claro */
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #f1f1f1; /* Sombra sutil al pasar el mouse */
+    border-color: #bbb; /* Borde más oscuro al pasar el mouse */
+}
+
+.social-btn:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.divider hr {
+    width: 40%;
+    border: 1px solid #ccc;
+}
+
+.divider span {
+    margin: 0 10px;
+    color: #666;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #e9bc00;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el botón de login */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Estilos para el enlace de olvidar contraseña */
+.forgot-password a {
+    color: #e9bc00; /* Igual que el botón "Regístrate" */
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Subrayado cuando el usuario pasa el cursor */
+}
+
+/* Estilos para "Recordar dispositivo" y enlace de "Olvidaste tu contraseña?" */
+.remember-device {
+    display: flex;
+    justify-content: space-between; /* Alinea el checkbox a la izquierda y el enlace a la derecha */
+    align-items: center; /* Alineación vertical */
+    margin-bottom: 20px;
+}
+
+.remember-device label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo del checkbox */
+.remember-device input {
+    transform: scale(1.2); /* Un poco más grande para hacerlo más visible */
+    margin: 0;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 120px auto;
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .btn-login {
+        padding: 10px;
+    }
+}
+
+/* Estilo para el texto Marshmello DJ */
+.marshmello-dj {
+    font-size: 24px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Asegúrate de que esté en negrita */
+    white-space: nowrap; /* Evita el salto de línea entre "Marshmello" y "DJ" */
+    margin-left: 15px; /* Agrega un margen a la izquierda del texto para separarlo del logo */
+}
+
+/* Estilo para el fondo animado */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110vw;  /* Un poco más grande para que el efecto sea fluido */
+    height: 110vh;
+    background: url('../images/loginbg.jpg') no-repeat center center;
+    background-size: cover;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    z-index: -1;
+}

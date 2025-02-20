@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/register.css"> <!-- Enlaza tu archivo CSS existente -->
+</head>
+<body>
+    <!-- Encabezado fijo -->
+    <header>
+        <nav>
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="../html/index.html">
+                    <img src="../images/logoM.png" alt="Logo de Marshmello" style="height: 50px;"> <!-- Ajusta el tamaño según sea necesario -->
+                </a>
+                <span class="marshmello-dj">Marshmello DJ</span> <!-- Aplica la clase para el estilo -->
+            </div>            
+            <ul class="nav-links">
+                <li><a href="../html/login.php">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-container">
+            <h2>Registrarse</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contrasena:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar contrasena:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </main>
+    
+    <script src="login.js"></script>
+</body>
+</html>

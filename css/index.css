@@ -1,0 +1,298 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000; /* Texto en negro */
+    background-color: #FFFFFF; /* Fondo blanco */
+}
+
+/* Encabezado fijo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF; /* Fondo blanco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    z-index: 1000;
+    padding: 15px 0; /* Más grande */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+.nav-links li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e9bc00; /* Color al hacer hover */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+.icon-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre ícono y texto */
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #e9bc00; /* Color al hacer hover */
+}
+
+/* Carrusel de imágenes */
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del carrusel */
+    margin: 120px auto; /* Ajuste para el encabezado y el margen */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    user-select: none;
+}
+
+.carrusel-btn.prev {
+    left: 10px;
+}
+
+.carrusel-btn.next {
+    right: 10px;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicadores del carrusel */
+.carrusel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carrusel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrusel-indicator.active {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Álbumes del artista */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre álbumes */
+    max-width: 1200px; /* Ancho máximo de la cuadrícula */
+    margin: 40px auto; /* Centrar la cuadrícula */
+    padding: 20px;
+}
+
+.album {
+    background-color: #F9F9F9; /* Fondo gris claro */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.album.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.album img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.album h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.album p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .album-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+}
+
+/* Estilos para el separador */
+.separador {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    margin: 40px 0;
+}
+
+.separador h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333; /* Texto oscuro */
+}
+
+.separador p {
+    font-size: 18px;
+    color: #777; /* Texto gris */
+}
+
+/* Estilos para las flechas del carrusel */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Fondo transparente */
+    color: #000; /* Color del ícono */
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: none; /* Sin sombra */
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fondo blanco sólido al hacer hover */
+    transform: translateY(-50%) scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+.carrusel-btn.prev {
+    left: 20px;
+}
+
+.carrusel-btn.next {
+    right: 20px;
+}
+
+.logo a img {
+    transition: transform 0.4s ease;
+}
+
+.logo a img:hover {
+    transform: scale(1.3); /* Aumenta el tamaño del logo al hacer hover */
+}
+
+/* Transiciones de desvanecido para el carrusel */
+.carrusel-inner {
+    display: flex;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carrusel-item.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Transiciones para los álbumes */
+.album {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.album.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Agregar estilo específico para el texto Marshmello DJ */
+.marshmello-dj {
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Asegúrate de que esté en negrita */
+    white-space: nowrap; /* Evita el salto de línea entre "Marshmello" y "DJ" */
+    margin-left: 15px; /* Agrega un margen a la izquierda del texto para separarlo del logo */
+}
